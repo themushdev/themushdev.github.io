@@ -1,0 +1,166 @@
+:root {
+  --clr-primary-400: hsl(257, 40%, 49%);
+  --clr-primary-100: hsl(300, 69%, 71%);
+
+  --ff-heading: "Poppins", sans-serif;
+  --ff-body: 'Open Sans', sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+
+  --fs-400: 1.2rem;
+  --fs-600: 2.7rem;
+
+  --fa-border-radius: 50%;
+  --fa-border-padding: 10px;
+}
+ 
+
+*{
+  margin:0px;
+  padding:0px;
+  margin-left:0px;
+  padding-left:0px;
+  padding-top:0px;
+  left:0px;
+}
+
+
+html {
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url(/images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--clr-primary-400);
+  font-family: var(--ff-heading);
+  height: 100vh;
+}
+
+
+@media (max-width: 50em) {
+
+  body {
+    background-image: url(/images/bg-mobile.svg);
+  }
+
+}
+
+header {
+  margin-left: 90px;
+}
+
+header img{
+  width: 230px;
+  height: 230px;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.main-sec {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  margin: 0 auto;
+  gap: 3em;
+}
+
+.img {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
+  width: 600px;
+  margin-right: -100px;
+}
+
+.text {
+  color: white;
+  margin-top: -100px;
+  margin-left: 20px;
+}
+
+.text h1 {
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-600);
+  margin-bottom: 30px;
+  width: 500px;
+}
+
+.text p {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+  margin-bottom: 30px;
+  max-width: 50ch
+}
+
+.register {
+  font-family: var(--ff-heading);
+  padding: 15px 60px;
+  border-radius: 100vmax;
+  border: none;
+  box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.3);
+  color: var(--clr-primary-400);
+}
+
+.register:hover,
+:focus {
+  background-color: var(--clr-primary-100);
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  width: 1360px;
+  flex-direction: row;
+  justify-content: end;
+  
+}
+
+i {
+  display: inline-block;
+  border: 1.5px solid #fff;
+  color: white;
+  border-radius: 100%;
+  padding: .5em; /* adjust padding */
+  line-height: initial !important; /* reset line-height */
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+i:hover,
+:focus {
+  color: var(--clr-primary-100);
+  border: 1.5px solid var(--clr-primary-100);
+}
+
+
+@media (max-width: 50em) {
+  body {
+    width: 375px;
+  }
+  
+  .main-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  header {
+    margin: 0;
+  }
+}
